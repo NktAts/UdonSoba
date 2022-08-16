@@ -7,6 +7,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NktAts/UdonSoba/blob/master/LICENSE)
 
 ## 更新履歴
+* 2022/8/16: Ver1.3、ユドナリウムリリィの文字色変更に対応
 * 2020/10/3：Ver1.2、必要なファイルのみoutputに格納、文字コード変更
 * 2019/7/2：Ver1.1、README更新、ライセンスに関するファイルを追加
 * 2019/7/1：Ver1.0、テキストファイルを読み、タブごとに出力する機能を追加

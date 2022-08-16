@@ -39,7 +39,21 @@
 							</xsl:attribute>
 						</img>
 					</td> 
-					<td><xsl:value-of select="."/></td>
+					<td>
+						<xsl:choose>
+							<xsl:when test="count(@messColor)>0">
+								<xsl:element name="font">
+									<xsl:attribute name="color">
+										<xsl:value-of select="@messColor" />
+									</xsl:attribute>
+									<xsl:value-of select="."/>
+								</xsl:element>
+							</xsl:when>
+							<xsl:otherwise> 
+								<xsl:value-of select="."/>
+							</xsl:otherwise>
+						</xsl:choose>
+					</td>
 					<td><xsl:value-of select="@timestamp"/></td> 
 				</tr>
 			</xsl:when>
