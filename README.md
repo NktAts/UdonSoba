@@ -7,6 +7,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NktAts/UdonSoba/blob/master/LICENSE)
 
 ## 更新履歴
+* 2023/7/30: Ver1.4、.webp画像読み込みに対応
 * 2022/8/16: Ver1.3、ユドナリウムリリィの文字色変更に対応
 * 2020/10/3：Ver1.2、必要なファイルのみoutputに格納、文字コード変更
 * 2019/7/2：Ver1.1、README更新、ライセンスに関するファイルを追加
@@ -25,7 +26,7 @@
 
 * OS:Windows10 64bit  
 * ブラウザ：Google Chrome  
-* ユドナリウム：Ver1.9.2によって作成されたルームデータ  
+* ユドナリウム：Ver1.15.2によって作成されたルームデータ  
 
 ## 使用方法
 1. 「input」フォルダに、ルームデータのzipファイルを1つだけ格納してください。
