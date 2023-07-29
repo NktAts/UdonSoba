@@ -47,7 +47,7 @@ mkdir %outputFolder%\img
 echo 出力フォルダ生成完了
 
 :CopyNeedFiles
-dir /b .\temporary\ | findstr ".gif .png .jpg .jpeg .jpe" > .\temporary\UdonSobaImageList.txt
+dir /b .\temporary\ | findstr ".gif .png .jpg .jpeg .jpe .webp" > .\temporary\UdonSobaImageList.txt
 for /f %%a in (.\temporary\UdonSobaImageList.txt) do (
     findstr %%~na .\temporary\chat.xml > nul
     echo %%~na
@@ -63,6 +63,7 @@ ren %outputFolder%\img\*.jpeg *.imagedata
 ren %outputFolder%\img\*.jpe *.imagedata
 ren %outputFolder%\img\*.png *.imagedata
 ren %outputFolder%\img\*.gif *.imagedata
+ren %outputFolder%\img\*.webp *.imagedata
 echo 拡張子変更完了
 :convert_main
 for /l %%c in (0,1,%n%) do (

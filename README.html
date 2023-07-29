@@ -1,376 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>README.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Udon&#x508d;&#xff08;&#x3046;&#x3069;&#x3093;&#x305d;&#x3070;&#xff09; -- &#x30e6;&#x30c9;&#x30ca;&#x30ea;&#x30a6;&#x30e0;&#x306e;&#x30ed;&#x30b0;&#x30b3;&#x30f3;&#x30d0;&#x30fc;&#x30bf;</title>
+        <style>
+/* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
 }
 
 </style>
-
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
 }
 
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
 }
 </style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="udon%E5%82%8D%E3%81%86%E3%81%A9%E3%82%93%E3%81%9D%E3%81%B0----%E3%83%A6%E3%83%89%E3%83%8A%E3%83%AA%E3%82%A6%E3%83%A0%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF">Udon傍（うどんそば） -- ユドナリウムのログコンバータ</h1>
-<p><img src="assets/icon/うどんそば.png" alt="うどんそば" title="うどんそばアイコン"></p>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="udon傍うどんそば----ユドナリウムのログコンバータ">Udon傍（うどんそば） -- ユドナリウムのログコンバータ</h1>
+<p><img src="file:///c:\Git\UdonSoba\assets\icon\%E3%81%86%E3%81%A9%E3%82%93%E3%81%9D%E3%81%B0.png" alt="うどんそば" title="うどんそばアイコン"></p>
 <p>製作者：りょーさん</p>
 <p><a href="https://github.com/NktAts/UdonSoba/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a></p>
-<h2 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h2>
+<h2 id="更新履歴">更新履歴</h2>
 <ul>
+<li>2023/7/30: Ver1.4、.webp画像読み込みに対応</li>
 <li>2022/8/16: Ver1.3、ユドナリウムリリィの文字色変更に対応</li>
 <li>2020/10/3：Ver1.2、必要なファイルのみoutputに格納、文字コード変更</li>
 <li>2019/7/2：Ver1.1、README更新、ライセンスに関するファイルを追加</li>
@@ -378,18 +54,18 @@ code {
 <li>2019/6/26：Ver0.2、Githubに登録。READMEを.mdファイルに変更</li>
 <li>2019/6/25：Ver0.1、初期作成</li>
 </ul>
-<h2 id="%E6%A6%82%E8%A6%81">概要</h2>
+<h2 id="概要">概要</h2>
 <p>ユドナリウムのルームデータから、参照に適したHTMLファイルを生成するバッチファイルです。</p>
-<p><img src="assets/icon/sample_output.png" alt="出力サンプル" title="うどんそば出力サンプル"></p>
-<h2 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h2>
+<p><img src="file:///c:\Git\UdonSoba\assets\icon\sample_output.png" alt="出力サンプル" title="うどんそば出力サンプル"></p>
+<h2 id="動作確認環境">動作確認環境</h2>
 <p>製作者は以下の環境にて動作確認を行っています。<br>
 以下の環境以外での動作は保証いたしません。</p>
 <ul>
 <li>OS:Windows10 64bit</li>
 <li>ブラウザ：Google Chrome</li>
-<li>ユドナリウム：Ver1.9.2によって作成されたルームデータ</li>
+<li>ユドナリウム：Ver1.15.2によって作成されたルームデータ</li>
 </ul>
-<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+<h2 id="使用方法">使用方法</h2>
 <ol>
 <li>「input」フォルダに、ルームデータのzipファイルを1つだけ格納してください。</li>
 <li><strong>「input」フォルダに入っている「chat-tab.txt」に、出力したいタブのタブ名を1行ごとに記載してください。</strong></li>
@@ -397,7 +73,7 @@ code {
 <li>コマンドプロンプトが開き、「続行するには何かキーを押してください . . .」と出力されたらキーを押してください。</li>
 <li>実行したフォルダに「output_(日時)」というフォルダができていると思うので、フォルダごと好きな場所に移動してください。  ※フォルダ名や、中のHTMLのファイル名を変更しても問題なく閲覧可能です。</li>
 </ol>
-<h2 id="%E5%86%85%E5%AE%B9%E7%89%A9">内容物</h2>
+<h2 id="内容物">内容物</h2>
 <ul>
 <li>assetsフォルダ</li>
 </ul>
@@ -426,14 +102,14 @@ code {
 </ul>
 <p>ライセンスについて記載されたファイルです。テキストエディタで参照できます。</p>
 <ul>
-<li>README.md</li>
+<li><a href="http://README.html">README.md</a></li>
 </ul>
 <p>Githubで表示するときのREADMEです。</p>
 <ul>
 <li>README.html</li>
 </ul>
 <p>このファイルです。</p>
-<h2 id="%E4%BD%BF%E7%94%A8%E4%B8%8A%E3%81%AE%E6%B3%A8%E6%84%8F">使用上の注意</h2>
+<h2 id="使用上の注意">使用上の注意</h2>
 <ul>
 <li>
 <p>Ver1.2より、「chat-tab.txt」の文字コードがSJISからUTF-8に変更になりました。過去の「chat-tab.txt」をそのまま使う場合、文字コードを変更してください。（よくわからない場合、ファイル置き換えではなく、デフォルトの「chat-tab.txt」内に古いファイルの中身をコピペしてください）</p>
@@ -442,7 +118,7 @@ code {
 <p>例外処理がとても雑です。  ルームデータ以外を格納する、処理途中で中断して再実行するなどを行った場合に想定しない動作をする場合があります。  自力での対処が難しい方は、使用方法を守り、フォルダ構成がおかしくなったら元のコンバータを再取得してください。</p>
 </li>
 </ul>
-<h2 id="%E7%8F%BE%E6%99%82%E7%82%B9%E3%81%A7%E6%B0%97%E3%81%A5%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E4%B8%8D%E5%85%B7%E5%90%88%E3%82%84%E4%BB%95%E6%A7%98">現時点で気づいている不具合や仕様</h2>
+<h2 id="現時点で気づいている不具合や仕様">現時点で気づいている不具合や仕様</h2>
 <ul>
 <li>
 <p>ダイスボットは、初期画像(黒い人型)で表示されます。</p>
@@ -451,7 +127,7 @@ code {
 <p>トランプやダイスをキャラクターやプレイヤーの画像として使用した場合、画像が表示されません。</p>
 </li>
 </ul>
-<h2 id="%E8%A1%8C%E3%81%84%E3%81%9F%E3%81%84%E6%94%B9%E4%BF%AE%E9%A0%85%E7%9B%AE">行いたい改修項目</h2>
+<h2 id="行いたい改修項目">行いたい改修項目</h2>
 <ul>
 <li>CSSカスタマイズ対応（キャラごとの文字色変更対応、表の形を変更など含む）</li>
 <li>スマホも想定したデフォルトCSSの作成</li>
@@ -460,22 +136,22 @@ code {
 <li>日時のHH:MM:SS表示</li>
 <li>Typescript+HTML+CSS形式にしてどこかのサイトで公開</li>
 </ul>
-<h2 id="%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">使用しているソフトウェア</h2>
+<h2 id="使用しているソフトウェア">使用しているソフトウェア</h2>
 <p>以下のソフトウェアを使用しています。</p>
 <ul>
-<li>7-Zip(https://sevenzip.osdn.jp/)</li>
-<li>msxsl.exe(https://www.microsoft.com/en-us/download/details.aspx?id=21714)</li>
+<li>7-Zip(<a href="https://sevenzip.osdn.jp/">https://sevenzip.osdn.jp/</a>)</li>
+<li>msxsl.exe(<a href="https://www.microsoft.com/en-us/download/details.aspx?id=21714">https://www.microsoft.com/en-us/download/details.aspx?id=21714</a>)</li>
 </ul>
-<h2 id="%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%B4%A0%E6%9D%90">使用している素材</h2>
+<h2 id="使用している素材">使用している素材</h2>
 <p>ユドナリウムと同様に、以下を素材として使用しています。</p>
 <ul>
-<li>©無料素材倶楽部 (http://sozai.7gates.net/)</li>
-<li>©Ｒド (http://www.geocities.co.jp/Milano-Cat/3319/)</li>
-<li>©きまぐれアフター (http://www5d.biglobe.ne.jp/~gakai/)</li>
-<li>©鍛冶屋黒胡椒 (https://www15.atwiki.jp/smith_blp/pages/1.html)</li>
-<li>©Material.io (https://material.io/tools/icons/)</li>
+<li>©無料素材倶楽部 (<a href="http://sozai.7gates.net/">http://sozai.7gates.net/</a>)</li>
+<li>©Ｒド (<a href="http://www.geocities.co.jp/Milano-Cat/3319/">http://www.geocities.co.jp/Milano-Cat/3319/</a>)</li>
+<li>©きまぐれアフター (<a href="http://www5d.biglobe.ne.jp/~gakai/">http://www5d.biglobe.ne.jp/~gakai/</a>)</li>
+<li>©鍛冶屋黒胡椒 (<a href="https://www15.atwiki.jp/smith_blp/pages/1.html">https://www15.atwiki.jp/smith_blp/pages/1.html</a>)</li>
+<li><a href="http://xn--Material-tka.io">©Material.io</a> (<a href="https://material.io/tools/icons/">https://material.io/tools/icons/</a>)</li>
 </ul>
-<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+<h2 id="おまけ">おまけ</h2>
 <ul>
 <li>
 <p>使用した際に、製作者のTwitter(@NktAts)に連絡をくれるととても喜びます。</p>
@@ -484,15 +160,17 @@ code {
 <p>少し詳しい人が見れば、各所に豪快な仕様が見られると思います。（画像の扱いとか）  全ては製作者の技術力が拙いためです。誰か助けてください。</p>
 </li>
 </ul>
-<h2 id="%E9%80%A3%E7%B5%A1%E5%85%88">連絡先</h2>
+<h2 id="連絡先">連絡先</h2>
 <p>お問い合わせ・要望・不具合報告・改善アドバイス・感想などは、以下のいずれかの手段でご連絡ください。</p>
 <ul>
 <li>製作者のTwitterアカウント(@NktAts)にリプライやDM</li>
-<li>Github(https://github.com/NktAts/UdonSoba)にissueとして投稿</li>
+<li>Github(<a href="https://github.com/NktAts/UdonSoba">https://github.com/NktAts/UdonSoba</a>)にissueとして投稿</li>
 </ul>
 <h2 id="license">License</h2>
 <p><a href="https://github.com/NktAts/UdonSoba/blob/master/LICENSE">MIT License</a></p>
 <p>(以上)</p>
 
-</body>
-</html>
+        
+        
+    </body>
+    </html>
